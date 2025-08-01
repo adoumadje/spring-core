@@ -5,7 +5,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Test {
     public static void main(String[] args) {
-        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("config.xml");
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("com/adoumadje/spring/springcore/config.xml");
         Employee employee = applicationContext.getBean("emp", Employee.class);
         System.out.println(employee);
     }

@@ -1,0 +1,19 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean name="scores" class="com.adoumadje.spring.springcore.reftypes.Scores">
+        <property name="maths" value="97" />
+        <property name="physics" value="85" />
+        <property name="biology" value="98" />
+    </bean>
+
+    <bean name="student" class="com.adoumadje.spring.springcore.reftypes.Student">
+        <property name="scores" ref="scores" />
+    </bean>
+
+</beans>
