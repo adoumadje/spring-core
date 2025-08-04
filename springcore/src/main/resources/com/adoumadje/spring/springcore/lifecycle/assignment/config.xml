@@ -6,12 +6,10 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean name="patient" class="com.adoumadje.spring.springcore.lifecycle.annotationconfig.Patient">
-        <property name="id" value="154" />
+    <bean name="ticketReservation" class="com.adoumadje.spring.springcore.lifecycle.assignment.TicketReservation">
+        <property name="id" value="546" />
     </bean>
 
     <context:annotation-config />
-
-<!--    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />-->
 
 </beans>
