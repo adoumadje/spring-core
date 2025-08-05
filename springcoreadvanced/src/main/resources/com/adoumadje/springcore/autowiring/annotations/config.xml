@@ -1,0 +1,25 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config />
+
+    <bean name="address" class="com.adoumadje.springcore.autowiring.annotations.Address">
+        <property name="street" value="Narutowica" />
+        <property name="buildingNumber" value="18" />
+        <property name="city" value="Poznan" />
+    </bean>
+
+    <bean name="address1" class="com.adoumadje.springcore.autowiring.annotations.Address">
+        <property name="street" value="Kopinckiego" />
+        <property name="buildingNumber" value="31" />
+        <property name="city" value="Krakow" />
+    </bean>
+
+    <bean name="employee" class="com.adoumadje.springcore.autowiring.annotations.Employee" />
+
+</beans>

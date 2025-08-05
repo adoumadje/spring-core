@@ -12,6 +12,15 @@
         <property name="city" value="Poznan" />
     </bean>
 
-    <bean name="employee" class="com.adoumadje.springcore.autowiring.Employee" autowire="byType" />
+    <bean name="address1" class="com.adoumadje.springcore.autowiring.Address">
+        <property name="street" value="Narutowica" />
+        <property name="buildingNumber" value="18" />
+        <property name="city" value="Poznan" />
+    </bean>
+
+<!--    <bean name="employee" class="com.adoumadje.springcore.autowiring.Employee" autowire="byType" />-->
+<!--    <bean name="employee" class="com.adoumadje.springcore.autowiring.Employee" autowire="byName" />-->
+<!--    <bean name="employee" class="com.adoumadje.springcore.autowiring.Employee" autowire="constructor" />-->
+    <bean name="employee" class="com.adoumadje.springcore.autowiring.Employee" autowire="default" />
 
 </beans>
