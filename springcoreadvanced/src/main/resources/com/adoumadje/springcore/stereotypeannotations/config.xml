@@ -11,4 +11,10 @@
 
     <context:component-scan base-package="com.adoumadje.springcore.stereotypeannotations" />
 
+    <util:list list-class="java.util.ArrayList" id="students">
+        <value>Eduardo Camavinga</value>
+        <value>Tony Kroos</value>
+        <value>Cole Palmer</value>
+    </util:list>
+
 </beans>
