@@ -10,10 +10,18 @@ import java.util.List;
 @Component("inst")
 @Scope("prototype")
 public class Instructor {
-    @Value("123")
-    private Long id = 12L;
-    @Value("Mac Allister")
-    private String name = "Camavinga";
+//    @Value("123")
+//    private Long id = 12L;
+//    @Value("#{64+92}")
+//    private Long id;
+    @Value("#{T(java.lang.Math).abs(-99)}")
+    private Long id;
+//    @Value("Mac Allister")
+//    private String name = "Camavinga";
+//    @Value("#{new String('Jude Bellingham')}")
+//    private String name;
+    @Value("#{'Ottamendy'.toUpperCase()}")
+    private String name;
     @Value("#{students}")
     private List<String> students;
     @Autowired
