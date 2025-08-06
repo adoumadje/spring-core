@@ -1,8 +1,19 @@
 package com.adoumadje.springcore.stereotypeannotations;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component("inst")
+@Scope("prototype")
 public class Instructor {
-    private Long id;
-    private String name;
+    @Value("123")
+    private Long id = 12L;
+    @Value("Mac Allister")
+    private String name = "Camavinga";
+    @Autowired
+    private Profile profile;
 
     public Long getId() {
         return id;
@@ -25,6 +36,7 @@ public class Instructor {
         return "Instructor{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
+                ", profile=" + profile +
                 '}';
     }
 }
