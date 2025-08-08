@@ -1,11 +1,15 @@
 package com.adoumadje.springjdbc.dao;
 
 import com.adoumadje.springjdbc.dto.Employee;
+import com.adoumadje.springjdbc.dto.EmployeeRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
+
+import java.util.List;
 
 public class EmployeeDAOImpl implements EmployeeDAO {
 
     private JdbcTemplate jdbcTemplate;
+    private EmployeeRowMapper employeeRowMapper;
 
     public JdbcTemplate getJdbcTemplate() {
         return jdbcTemplate;
@@ -13,6 +17,14 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 
     public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
+    }
+
+    public EmployeeRowMapper getEmployeeRowMapper() {
+        return employeeRowMapper;
+    }
+
+    public void setEmployeeRowMapper(EmployeeRowMapper employeeRowMapper) {
+        this.employeeRowMapper = employeeRowMapper;
     }
 
     @Override
@@ -41,5 +53,22 @@ public class EmployeeDAOImpl implements EmployeeDAO {
                 WHERE id = ?
                 """;
         return jdbcTemplate.update(sql, employee.getId());
+    }
+
+    @Override
+    public Employee read(int id) {
+        String sql = """
+                SELECT * FROM employee
+                WHERE id = ?
+                """;
+        return jdbcTemplate.queryForObject(sql, employeeRowMapper, id);
+    }
+
+    @Override
+    public List<Employee> readAll() {
+        String sql = """
+                SELECT * FROM employee
+                """;
+        return jdbcTemplate.query(sql, employeeRowMapper);
     }
 }

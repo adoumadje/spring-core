@@ -16,8 +16,11 @@
         <constructor-arg name="dataSource" ref="dataSource" />
     </bean>
 
+    <bean name="employeeRowMapper" class="com.adoumadje.springjdbc.dto.EmployeeRowMapper" />
+
     <bean name="employeeDAO" class="com.adoumadje.springjdbc.dao.EmployeeDAOImpl">
         <property name="jdbcTemplate" ref="jdbcTemplate" />
+        <property name="employeeRowMapper" ref="employeeRowMapper" />
     </bean>
 
 </beans>
