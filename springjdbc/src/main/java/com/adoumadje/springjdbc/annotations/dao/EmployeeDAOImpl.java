@@ -1,31 +1,19 @@
-package com.adoumadje.springjdbc.dao;
+package com.adoumadje.springjdbc.annotations.dao;
 
-import com.adoumadje.springjdbc.dto.Employee;
-import com.adoumadje.springjdbc.dto.EmployeeRowMapper;
+import com.adoumadje.springjdbc.annotations.dto.Employee;
+import com.adoumadje.springjdbc.annotations.dto.EmployeeRowMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Component("employeeDAO")
 public class EmployeeDAOImpl implements EmployeeDAO {
-
+    @Autowired
     private JdbcTemplate jdbcTemplate;
+    @Autowired
     private EmployeeRowMapper employeeRowMapper;
-
-    public JdbcTemplate getJdbcTemplate() {
-        return jdbcTemplate;
-    }
-
-    public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
-        this.jdbcTemplate = jdbcTemplate;
-    }
-
-    public EmployeeRowMapper getEmployeeRowMapper() {
-        return employeeRowMapper;
-    }
-
-    public void setEmployeeRowMapper(EmployeeRowMapper employeeRowMapper) {
-        this.employeeRowMapper = employeeRowMapper;
-    }
 
     @Override
     public int create(Employee employee) {

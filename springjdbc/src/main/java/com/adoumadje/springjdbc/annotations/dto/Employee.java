@@ -1,4 +1,4 @@
-package com.adoumadje.springjdbc.dto;
+package com.adoumadje.springjdbc.annotations.dto;
 
 public class Employee {
     private Integer id;

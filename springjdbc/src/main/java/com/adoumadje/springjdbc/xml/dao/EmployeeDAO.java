@@ -1,6 +1,6 @@
-package com.adoumadje.springjdbc.dao;
+package com.adoumadje.springjdbc.xml.dao;
 
-import com.adoumadje.springjdbc.dto.Employee;
+import com.adoumadje.springjdbc.xml.dto.Employee;
 
 import java.util.List;
 

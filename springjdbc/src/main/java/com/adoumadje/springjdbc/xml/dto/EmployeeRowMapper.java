@@ -1,4 +1,4 @@
-package com.adoumadje.springjdbc.dto;
+package com.adoumadje.springjdbc.xml.dto;
 
 import org.springframework.jdbc.core.RowMapper;
 
