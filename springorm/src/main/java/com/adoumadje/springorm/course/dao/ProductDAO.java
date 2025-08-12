@@ -1,6 +1,6 @@
-package com.adoumadje.springorm.dao;
+package com.adoumadje.springorm.course.dao;
 
-import com.adoumadje.springorm.entity.Product;
+import com.adoumadje.springorm.course.entity.Product;
 
 import java.util.List;
 

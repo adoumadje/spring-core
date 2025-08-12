@@ -1,4 +1,4 @@
-package com.adoumadje.springorm.entity;
+package com.adoumadje.springorm.course.entity;
 
 
 import javax.persistence.Column;

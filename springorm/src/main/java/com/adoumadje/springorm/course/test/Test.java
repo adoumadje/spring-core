@@ -1,7 +1,7 @@
-package com.adoumadje.springorm.test;
+package com.adoumadje.springorm.course.test;
 
-import com.adoumadje.springorm.dao.ProductDAO;
-import com.adoumadje.springorm.entity.Product;
+import com.adoumadje.springorm.course.dao.ProductDAO;
+import com.adoumadje.springorm.course.entity.Product;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -9,7 +9,7 @@ import java.util.List;
 
 public class Test {
     public static void main(String[] args) {
-        String config = "com/adoumadje/springorm/test/config.xml";
+        String config = "com/adoumadje/springorm/course/test/config.xml";
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext(config);
         ProductDAO productDAO = applicationContext.getBean("productDAO", ProductDAO.class);
 

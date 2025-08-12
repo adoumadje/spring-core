@@ -1,6 +1,6 @@
-package com.adoumadje.springorm.dao;
+package com.adoumadje.springorm.course.dao;
 
-import com.adoumadje.springorm.entity.Product;
+import com.adoumadje.springorm.course.entity.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Component;
