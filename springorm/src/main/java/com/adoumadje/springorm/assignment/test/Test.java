@@ -26,6 +26,6 @@ public class Test {
 //        System.out.println(passenger);
 
         List<Passenger> passengers = passengerDAO.findAll();
-        System.out.println(passengers);
+        System.out.println(passengers); 
     }
 }
