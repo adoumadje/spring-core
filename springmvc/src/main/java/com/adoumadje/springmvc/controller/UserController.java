@@ -2,6 +2,7 @@ package com.adoumadje.springmvc.controller;
 
 import com.adoumadje.springmvc.dto.User;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -10,20 +11,31 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class UserController {
+//    @RequestMapping("/registrationPage")
+//    public ModelAndView showRegistrationPage() {
+//        ModelAndView modelAndView = new ModelAndView();
+//        modelAndView.setViewName("registrationPage");
+//        return modelAndView;
+//    }
+
     @RequestMapping("/registrationPage")
-    public ModelAndView showRegistrationPage() {
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("registrationPage");
-        return modelAndView;
+    public String showRegistrationPage() {
+        return "registrationPage";
     }
 
+//    @RequestMapping(value = "/registerUser", method = RequestMethod.POST)
+//    public ModelAndView registerUser(@ModelAttribute User user) {
+//        ModelAndView modelAndView = new ModelAndView();
+//        System.out.println(user);
+//        modelAndView.setViewName("registrationSuccessful");
+//        modelAndView.addObject("user", user);
+//        return modelAndView;
+//    }
+
     @RequestMapping(value = "/registerUser", method = RequestMethod.POST)
-    public ModelAndView registerUser(@ModelAttribute User user) {
-        ModelAndView modelAndView = new ModelAndView();
-        System.out.println(user);
-        modelAndView.setViewName("registrationSuccessful");
-        modelAndView.addObject("user", user);
-        return modelAndView;
+    public String registerUser(@ModelAttribute User user, ModelMap model) {
+        model.addAttribute("user", user);
+        return "registrationSuccessful";
     }
 
     @RequestMapping("/employeeInfo")
