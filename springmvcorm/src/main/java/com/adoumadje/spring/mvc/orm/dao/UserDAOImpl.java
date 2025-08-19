@@ -21,4 +21,9 @@ public class UserDAOImpl implements UserDAO {
     public List<User> findAll() {
         return hibernateTemplate.loadAll(User.class);
     }
+
+    @Override
+    public User find(int id) {
+        return hibernateTemplate.get(User.class, id);
+    }
 }
