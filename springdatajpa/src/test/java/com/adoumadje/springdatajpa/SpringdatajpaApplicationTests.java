@@ -38,4 +38,16 @@ class SpringdatajpaApplicationTests {
 	void findAllProducts() {
 		productRepository.findAll().forEach(System.out::println);
 	}
+
+	@Test
+	void findByName() {
+		List<Product> products = productRepository.findByName("Mouse");
+		System.out.println(products);
+	}
+
+	@Test
+	void findByNameAndPrice() {
+		List<Product> products = productRepository.findByNameAndPrice("Mouse", 15.38);
+		System.out.println(products);
+	}
 }
